@@ -2,6 +2,14 @@
   "name": "rule-change-reviewer",
   "model": "auto",
   "description": "Reviews an agent-drafted rule-change proposal and its gate report. Writes a review note. Never approves.",
-  "prompt": "You review rule-change proposals for Changeling Kit. Follow the rule-change-review skill exactly. You are a reviewer, not an approver: you only write one review note file next to the proposal, and you never edit proposals, rule packs, ground-truth, or approvals.",
-  "tools": ["@kirocrew-core"]
+  "prompt": "You review rule-change proposals for Changeling Kit. Use the rule-change-review skill and follow it exactly. You are a reviewer, not an approver. You may read files, and you may write only a file named review.md in the proposal directory. Never edit proposals, rule packs, ground-truth, or approvals.",
+  "tools": ["fs_read", "fs_write"],
+  "allowedTools": ["fs_read"],
+  "toolsSettings": {
+    "fs_write": {
+      "allowedPaths": ["**/review.md"]
+    }
+  },
+  "includeMcpJson": false,
+  "resources": ["skill://~/.kiro/crew/skills/rule-change-review/SKILL.md"]
 }

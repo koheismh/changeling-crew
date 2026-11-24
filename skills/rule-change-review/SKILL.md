@@ -1,5 +1,7 @@
 ---
-description: How to review a Changeling Kit rule-change proposal and write a fixed-format review note
+name: rule-change-review
+description: Review a Changeling Kit rule-change proposal and its gate report, then write a fixed-format review.md. Use when asked to review a proposal directory.
+triggers: [review, proposal, gate report, rule change]
 always: false
 ---
 
