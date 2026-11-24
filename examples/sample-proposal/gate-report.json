@@ -1,0 +1,10 @@
+{
+  "note": "SAMPLE gate report for feasibility test. The ground-truth gate is deliberately missing.",
+  "packDigest": "sample",
+  "gates": [
+    { "name": "schema", "required": true, "status": "pass" },
+    { "name": "citation-quote", "required": true, "status": "pass" },
+    { "name": "no-change-before-effective-date", "required": true, "status": "pass" },
+    { "name": "ground-truth", "required": true, "status": "missing" }
+  ]
+}
